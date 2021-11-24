@@ -6,7 +6,7 @@ const server = smtp.createServer(function (req) {
     })
 
     req.on('message', async function (stream, ack) {
-        handleMailParse(req, stream, ack)
+        handleMailParse(stream, ack)
     })
     req.on('greeting', function (_stream, ack) {
         ack.accept()

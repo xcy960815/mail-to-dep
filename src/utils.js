@@ -18,7 +18,7 @@ function filterMailDomain(to, ack) {
  * 解析邮件内容
  * @param stream
  */
-async function handleMailParse(req, stream, ack) {
+async function handleMailParse(stream, ack) {
     console.log('simpleParser--simpleParser', simpleParser)
     const parsed = await simpleParser(stream)
     const content = parsed.html || parsed.text
