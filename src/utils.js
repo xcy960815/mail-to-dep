@@ -7,7 +7,6 @@ const simpleParser = require('mailparser').simpleParser // 解析邮件内容
  */
 function filterMailDomain(to, ack) {
     const mailDomain = to.split('@')[1]
-    console.log('mailDomain--mailDomain', mailDomain)
     if (mailDomain === maildDomain) {
         ack.accept()
     } else {
@@ -32,14 +31,6 @@ async function handleMailParse(stream, ack) {
         console.log('处理附件：', filename)
         console.log('处理附件：', content)
         console.log('处理附件：', contentType)
-        // uploadAllAttachments.push()
-        // uploadfile(
-        //     proj_id,
-        //     gitlabToken,
-        //     at.content,
-        //     at.filename,
-        //     at.contentType
-        // )
     })
 
     ack.accept()
