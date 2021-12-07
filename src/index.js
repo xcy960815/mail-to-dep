@@ -13,5 +13,5 @@ const server = smtp.createServer(function (req) {
     })
 })
 
-server.listen(9025)
-console.log('starting mail server listen port 9025.')
+server.listen(25)
+console.log('starting mail server listen port 25.')
